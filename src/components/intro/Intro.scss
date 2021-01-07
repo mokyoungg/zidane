@@ -1,0 +1,61 @@
+@import "../../styles/reset.scss";
+
+.body {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left,
+.right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+.left {
+  background-color: #0a21ab;
+  left: 0%;
+  width: 0%;
+}
+
+.right {
+  background-color: #ee1c25;
+  right: 0%;
+  width: 100%;
+}
+
+.img-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 33.3%;
+  .img1 {
+    background-image: url("../../images/zidaneimg2.jpg");
+    background-size: cover;
+    width: 0;
+    height: 100vh;
+  }
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  transform: translateY(-50%);
+  h1 {
+    font-size: 90px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  p {
+    font-size: 30px;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    padding-left: 65%;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}

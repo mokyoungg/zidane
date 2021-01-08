@@ -1,0 +1,79 @@
+@import "../../styles/reset.scss";
+@import "../../styles/common";
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Xanh Mono", monospace;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.overlayTextWrap {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  height: 20px;
+  overflow: hidden;
+  .hideText {
+    font-size: 20px;
+  }
+  .revealText {
+    font-size: 20px;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: $zigray;
+}
+
+.textSection {
+  height: 100vh;
+  z-index: 1;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  background-color: $fblue;
+  font-family: "Montserrat", sans-serif;
+  color: $zigray;
+  .title {
+    font-size: 100px;
+    font-weight: bold;
+  }
+  .description {
+    margin-top: 5%;
+    width: 500px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .bar {
+    background-color: $fred;
+    margin-top: 3%;
+    height: 10px;
+    width: 0;
+  }
+}
+
+.imgSection {
+  .img1 {
+    z-index: 5;
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    //margin-top: 10%;
+    width: 0;
+    height: 70%;
+  }
+}

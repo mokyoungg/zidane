@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Intro from "./components/intro/Intro";
+import App from "./components/App";
+import Landing from "./components/landing/Landing";
 
-ReactDOM.render(<Intro />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

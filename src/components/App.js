@@ -1,10 +1,11 @@
 import React from "react";
-import Practice from "./practice/Practice";
+import Landing from "../components/landing/Landing";
+import LesBleus from "../components/lesbleus/LesBleus";
 
 const App = () => {
   return (
     <div>
-      <Practice />
+      <LesBleus />
     </div>
   );
 };

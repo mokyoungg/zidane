@@ -46,10 +46,10 @@ const Intro = () => {
         </div>
       </div>
       <div className="text">
-        <p>
+        {/*<p>
           The
           <br /> Masetro
-        </p>
+        </p>*/}
         <h1>
           Zinedine
           <br /> Zidane

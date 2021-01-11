@@ -1,0 +1,145 @@
+@import "../../styles/reset.scss";
+@import "../../styles/common";
+
+//font-family: 'Oswald', sans-serif;
+//font-family: 'Quattrocento', serif;
+
+.wrapper {
+  width: 100%;
+  overflow: scroll;
+  background-color: #ffffff;
+}
+
+.title_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .title {
+    height: 190px;
+    width: 60%;
+    overflow: hidden;
+    font-size: 190px;
+    font-weight: bold;
+    color: $fblue;
+    text-align: center;
+    opacity: 1;
+    font-family: "Quattrocento", serif;
+    position: absolute;
+  }
+  .bar {
+    margin-top: 7%;
+    width: 60%;
+    height: 15px;
+    background-color: $fred;
+    opacity: 0.8;
+    position: absolute;
+  }
+  .overlay {
+    position: absolute;
+
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .first {
+    top: 0%;
+    height: 33.3%;
+    background-color: $fblue;
+  }
+
+  .second {
+    top: 33.3%;
+    height: 33.3%;
+    background-color: $fblue;
+  }
+  .third {
+    top: 66.6%;
+    height: 33.3%;
+    background-color: $fblue;
+  }
+}
+
+.subtitle_container {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .subtitle {
+    width: 100%;
+    font-family: "Oswald", sans-serif;
+    font-size: 250px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 3px 3px 0px black;
+    margin-bottom: -15%;
+    z-index: 20;
+  }
+  .subtitlebar.zero {
+    width: 100%;
+    height: 20px;
+    background-color: $fred;
+    z-index: 10;
+    margin-top: 3%;
+  }
+  .subtitlebar {
+    width: 100%;
+    height: 20px;
+    background-color: #ffffff;
+    z-index: 10;
+    margin-top: 3%;
+  }
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  background-color: $zigray; //#ebeae9;
+  z-index: 15;
+  position: relative;
+  display: flex;
+  .text_container {
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    width: 34%;
+    height: 45%;
+    .section_bar {
+      width: 100%;
+    }
+    .section_subtitle {
+      font-family: "Quattrocento", serif;
+      font-size: 20px;
+      color: $ziblue; //#232323;
+      text-align: right;
+      font-weight: bold;
+    }
+    .section_title {
+      font-family: "Quattrocento", serif;
+      font-size: 150px;
+      font-weight: bold;
+      color: $ziblue; //#232323;
+      width: 90vw;
+    }
+  }
+  .img_container {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 0%;
+    right: 0%;
+    .img1 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

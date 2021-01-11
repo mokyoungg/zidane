@@ -1,11 +1,11 @@
 import React from "react";
 import Landing from "../components/landing/Landing";
-import LesBleus from "../components/lesbleus/LesBleus";
+import Lesbelus from "../components/lesbelus/Lesbelus";
 
 const App = () => {
   return (
     <div>
-      <LesBleus />
+      <Lesbelus />
     </div>
   );
 };

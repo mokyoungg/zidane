@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./Landing.scss";
 import { gsap } from "gsap";
-import img1 from "../../images/zidaneimg2.jpg";
 
 const Landing = () => {
   useEffect(() => {
@@ -25,14 +24,32 @@ const Landing = () => {
         y: "-100%",
         ease: "power3.inOut",
       })
-      .from(".textSection", {
-        duration: 0.5,
-        opacity: 0,
-        height: 0,
-        ease: "power3.inOut",
-      })
-      .to(".bar", { duration: 0.5, width: "60%", ease: "power3.inOut" })
-      .to(".img1", { duration: 1, width: "30%", ease: "power3.inOut" });
+      .from(
+        ".title",
+        {
+          duration: 0.5,
+          height: "0px",
+        },
+        "textLabel"
+      )
+      .from(
+        ".description",
+        {
+          duration: 0.5,
+          height: "0px",
+        },
+        "textLabel"
+      )
+      .to(
+        ".bar",
+        { duration: 0.5, width: "60%", ease: "power3.inOut" },
+        "barLabel"
+      )
+      .to(
+        ".imgSection",
+        { duration: 0.5, width: "35%", ease: "power3.inOut" },
+        "barLabel"
+      );
   }, []);
 
   return (
@@ -59,9 +76,7 @@ const Landing = () => {
             at Real Madrid, together conquering the 2002 Champions League title.
           </div>
         </div>
-        <div className="imgSection">
-          <img className="img1" src={img1} alt="img1" />
-        </div>
+        <div className="imgSection"></div>
       </div>
     </div>
   );

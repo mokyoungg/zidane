@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./Lesbelus.scss";
 import { gsap } from "gsap";
+import FranceWorldCup from "./FranceWorldCup";
 import img1 from "../../images/worldcup.jpg";
 
 const Lesbelus = () => {
@@ -53,26 +54,6 @@ const Lesbelus = () => {
           <div className="subtitlebar one"></div>
           <div className="subtitlebar two"></div>
           <div className="subtitlebar three"></div>
-        </div>
-      </div>
-      <div className="section first">
-        <div className="text_container">
-          <hr className="section_bar" />
-          <p className="section_subtitle">July 12th, 1998</p>
-          <h3 className="section_title">Winning the World Cup in France</h3>
-        </div>
-        <div className="img_container">
-          <img className="img1" src={img1} alt="img1" />
-        </div>
-      </div>
-      <div className="section second">
-        <div className="text_container">
-          <hr className="section_bar" />
-          <p className="section_subtitle">July 12th, 1998</p>
-          <h3 className="section_title">Winning the World Cup in France</h3>
-        </div>
-        <div className="img_container">
-          <img className="img1" src={img1} alt="img1" />
         </div>
       </div>
     </div>

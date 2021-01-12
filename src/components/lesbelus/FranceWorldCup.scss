@@ -1,0 +1,110 @@
+@import "../../styles/reset.scss";
+@import "../../styles/common";
+
+//font-family: 'Oswald', sans-serif;
+//font-family: 'Quattrocento', serif;
+
+.wrapper {
+  width: 100%;
+  max-height: 100vh;
+  overflow: scroll;
+  background-color: #ffffff;
+}
+
+.section_first {
+  width: 100%;
+  height: 100vh;
+  //background-color: $zigray; //#ebeae9;
+  //z-index: 15;
+  position: relative;
+  display: flex;
+  overflow: visible;
+  .text_container {
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    width: 34%;
+    height: 45%;
+    .section_bar {
+      width: 100%;
+    }
+    .section_subtitle {
+      font-family: "Quattrocento", serif;
+      font-size: 20px;
+      color: $ziblue; //#232323;
+      text-align: right;
+      font-weight: bold;
+    }
+    .section_title {
+      font-family: "Quattrocento", serif;
+      font-size: 70px;
+      font-weight: bold;
+      color: $ziblue; //#232323;
+    }
+  }
+  .img_container {
+    margin-top: 3%;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 40%;
+    right: 15%;
+    .img1 {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.section_second {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .description_1998_container {
+    margin-top: 10%;
+    position: relative;
+    width: 70%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    .description_1998_1 {
+      font-family: "Quattrocento", serif;
+      font-size: 20px;
+      color: $ziblue;
+      width: 30%;
+    }
+    .description_1998_2 {
+      font-family: "Quattrocento", serif;
+      font-size: 20px;
+      color: $ziblue;
+      width: 30%;
+      margin-left: 3%;
+      margin-top: 25%;
+    }
+  }
+
+  .img_container_1998 {
+    position: relative;
+    width: 70%;
+    margin-top: 10%;
+    .img2_container {
+      width: 70%;
+
+      .img2 {
+        width: 100%;
+      }
+    }
+    .img3_container {
+      width: 70%;
+
+      margin-top: 10%;
+      margin-left: 30%;
+      .img3 {
+        width: 100%;
+      }
+    }
+  }
+}

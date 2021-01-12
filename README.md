@@ -10,3 +10,11 @@ gsap 을 활용한 애니메이션 연습
 - https://www.realmadrid.com/en/news/2020/05/05/zidanes-volley-chosen-as-the-most-beautiful-goal-in-champions-league-history-by-france-football
 - https://www.pinterest.co.kr/pin/648659152554543539/
 - https://www.pinterest.co.kr/pin/750060512931666812/
+- https://www.fifa.com/worldcup/news/the-day-frances-world-cup-dream-came-true-2985189
+- https://www.thenationalnews.com/sport/world-cup-1998-revisited-ronaldo-zidane-and-a-deeper-understanding-of-the-beautiful-game-1.246805
+- http://m-api.allfootballapp.com/article/692978
+- https://greatsofthegame.tumblr.com/post/165798924351/zinedine-zidane-france-1998-fifa-world-cup-final
+
+#### 내용(텍스트) 출처
+- https://www.realmadrid.com/en/news/2020/05/05/zidanes-volley-chosen-as-the-most-beautiful-goal-in-champions-league-history-by-france-football
+- https://en.wikipedia.org/wiki/Zinedine_Zidane

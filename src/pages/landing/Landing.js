@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import "./Landing.scss";
 import { gsap } from "gsap";
+import { withRouter } from "react-router-dom";
 
-const Landing = () => {
+const Landing = ({ history }) => {
   useEffect(() => {
     const timeline = gsap.timeline();
     timeline
@@ -23,7 +24,11 @@ const Landing = () => {
         duration: 1,
         y: "-100%",
         ease: "power3.inOut",
-      })
+        onComplete: () => {
+          history.push("/contents");
+        },
+      });
+    /*
       .from(
         ".title",
         {
@@ -49,7 +54,7 @@ const Landing = () => {
         ".imgSection",
         { duration: 0.5, width: "35%", ease: "power3.inOut" },
         "barLabel"
-      );
+      );*/
   }, []);
 
   return (
@@ -60,6 +65,7 @@ const Landing = () => {
           <p className="revealText">Zinedine Zidane</p>
         </div>
       </div>
+      {/*
       <div className="content">
         <div className="textSection">
           <div className="title">
@@ -77,9 +83,9 @@ const Landing = () => {
           </div>
         </div>
         <div className="imgSection"></div>
-      </div>
+      </div>*/}
     </div>
   );
 };
 
-export default Landing;
+export default withRouter(Landing);

@@ -1,12 +1,11 @@
 import React from "react";
 import Landing from "../components/landing/Landing";
-import Lesbelus from "../components/lesbelus/Lesbelus";
-import FranceWorldCup from "../components/lesbelus/FranceWorldCup";
+import Contents from "../components/contents/Contents";
 
 const App = () => {
   return (
     <div>
-      <Lesbelus />
+      <Contents />
     </div>
   );
 };

@@ -4,11 +4,10 @@
 //font-family: 'Oswald', sans-serif;
 //font-family: 'Quattrocento', serif;
 
-.section_wrapper_1 {
+.section_wrapper_2 {
   width: 100%;
   max-height: 100vh;
   background-color: #ffffff;
-  margin-bottom: 150%;
   //overflow: scroll; >> 이렇게 하면 전체 App에서 scroll이 두개 생긴다.
 }
 
@@ -23,7 +22,7 @@
   .text_container {
     position: absolute;
     top: 5%;
-    right: 15%;
+    left: 15%;
     width: 34%;
     height: 45%;
     .section_bar {
@@ -99,13 +98,19 @@
       }
     }
     .img3_container {
-      width: 70%;
-
+      width: 50%;
       margin-top: 10%;
-      margin-left: 30%;
+      margin-left: 50%;
       .img3 {
         width: 100%;
       }
+    }
+    .img4_container {
+      width: 50%;
+      margin-top: 10%;
+    }
+    .img4 {
+      width: 100%;
     }
   }
 }

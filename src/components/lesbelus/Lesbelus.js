@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Lesbelus.scss";
 import { gsap } from "gsap";
 import FranceWorldCup from "./FranceWorldCup";
-import img1 from "../../images/worldcup.jpg";
+import Euro from "./Euro";
 
 const Lesbelus = () => {
   useEffect(() => {
@@ -55,6 +55,12 @@ const Lesbelus = () => {
           <div className="subtitlebar two"></div>
           <div className="subtitlebar three"></div>
         </div>
+      </div>
+      <div>
+        <FranceWorldCup />
+      </div>
+      <div>
+        <Euro />
       </div>
     </div>
   );

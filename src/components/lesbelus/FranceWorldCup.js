@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./FranceWorldCup.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import img1 from "../../images/worldcup.jpg";
 import img2 from "../../images/worldcup2.jpg";
 import img3 from "../../images/worldcup4.jpg";
@@ -11,22 +10,6 @@ const FranceWorldCup = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    /*
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section_second",
-        start: "top 100px",
-        markers: true,
-        //스크롤 기준 정해주기. 이게 없으면 스크롤이 2개가 생긴다.
-        scroller: ".wrapper",
-      },
-    });
-
-    tl.from(".description_1998_1", {
-      y: 20,
-      opacity: 0,
-      duration: 1,
-    });*/
     gsap.from(".description_1998_1, .description_1998_2", {
       scrollTrigger: {
         trigger: ".section_second",
@@ -34,7 +17,9 @@ const FranceWorldCup = () => {
         end: "top 50px",
         scrub: 1,
         //markers: true,
-        scroller: ".wrapper",
+        //스크롤 기준 정해주기. 이게 없으면 해당 컴포넌트 내에 스크롤이 2개가 생긴다.
+        // 쿼리셀렉터로 잡은 이유는 전체 App의 스크롤로 트리거를 지정하기 위해
+        scroller: document.querySelector(".wrapper"),
       },
       y: 20,
       opacity: 0,
@@ -44,7 +29,7 @@ const FranceWorldCup = () => {
     gsap.from(".img2_container", {
       scrollTrigger: {
         trigger: ".description_1998_2",
-        scroller: ".wrapper",
+        scroller: document.querySelector(".wrapper"),
         start: "center 100px",
         end: "center 50px",
         //markers: true,
@@ -58,7 +43,7 @@ const FranceWorldCup = () => {
     gsap.from(".img3_container", {
       scrollTrigger: {
         trigger: ".img2_container",
-        scroller: ".wrapper",
+        scroller: document.querySelector(".wrapper"),
         start: "center 100px",
         end: "center 50px",
         //markers: true,
@@ -71,7 +56,7 @@ const FranceWorldCup = () => {
   }, []);
 
   return (
-    <div className="wrapper">
+    <div className="section_wrapper_1">
       <div className="section_first">
         <div className="text_container">
           <hr className="section_bar" />

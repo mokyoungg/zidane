@@ -1,0 +1,225 @@
+@import "../../styles/reset.scss";
+@import "../../styles/common";
+
+//font-family: 'Oswald', sans-serif;
+//font-family: 'Quattrocento', serif;
+//font-family: 'Raleway', sans-serif;
+
+.wrapper {
+  width: 100%;
+  //height: visible;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  //overflow: visible;
+}
+
+.title_container {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  .title {
+    font-family: "Raleway", sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    transform: translateY(100%);
+  }
+}
+
+.description_container {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  .portrait_container {
+    width: 30%;
+    height: 70%;
+    margin-right: 10%;
+    .portrait {
+      width: 100%;
+      height: 85%;
+    }
+    .honours {
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      text-align: right;
+      margin-top: 20px;
+      span {
+        font-family: "Quattrocento", serif;
+      }
+    }
+  }
+  .description {
+    width: 20%;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    span {
+      font-family: "Quattrocento", serif;
+    }
+  }
+}
+
+.animation_section {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .scroll {
+    width: 100%;
+    display: flex;
+    div {
+      color: #000000;
+      font-size: 100px;
+      background-color: #ffffff;
+      white-space: nowrap;
+      font-weight: lighter;
+      text-transform: uppercase;
+      animation: animate 40s linear infinite;
+      animation-delay: -10s;
+    }
+  }
+  .scroll.text2 {
+    width: 100%;
+    display: flex;
+    div {
+      color: #000000;
+      font-size: 100px;
+      background-color: #ffffff;
+      white-space: nowrap;
+      font-weight: lighter;
+      text-transform: uppercase;
+      animation: animate3 40s linear infinite;
+      animation-delay: -10s;
+    }
+  }
+}
+
+.animation_section .scroll div :nth-child(2) {
+  animation: animate2 40s linear infinite;
+  animation-delay: -20s;
+}
+
+.animation_section .scroll.text2 div :nth-child(2) {
+  animation: animate4 40s linear infinite;
+  animation-delay: -20s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.career_container {
+  width: 100%;
+  position: relative;
+  .line {
+    background-color: #d1d1d1;
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+  }
+}
+
+.career_right {
+  height: 451px;
+  margin-top: 0px;
+  position: relative;
+  display: flex;
+  .img_right {
+    position: absolute;
+    left: 65%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .info_right {
+    text-align: left;
+    position: relative;
+    top: 50%;
+    left: 49%;
+    height: 60px;
+    width: 150px;
+    background-color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    span {
+      font-family: "Quattrocento", serif;
+      font-size: 15px;
+    }
+  }
+}
+
+.career_left {
+  height: 451px;
+  margin-top: 0px;
+  position: relative;
+  display: flex;
+  margin-top: -135px;
+  .img_left {
+    position: absolute;
+    right: 60%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .info_left {
+    text-align: right;
+    position: relative;
+    top: 50%;
+    left: 41%;
+    height: 60px;
+    width: 150px;
+    background-color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    span {
+      font-family: "Quattrocento", serif;
+      font-size: 15px;
+    }
+  }
+}

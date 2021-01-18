@@ -43,11 +43,12 @@ const Lesbelus = () => {
   return (
     <div className="wrapper">
       <div className="title_container">
+        {/*
         <div className="title">Les Bleus</div>
         <div className="bar"></div>
         <div className="overlay first"></div>
         <div className="overlay second"></div>
-        <div className="overlay third"></div>
+        <div className="overlay third"></div>*/}
         <div className="subtitle_container">
           <div className="subtitle">10</div>
           <div className="subtitlebar zero"></div>

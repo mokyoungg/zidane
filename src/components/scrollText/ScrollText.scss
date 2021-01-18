@@ -1,0 +1,86 @@
+@import "../../styles/reset.scss";
+@import "../../styles/common";
+
+.animation_section {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .scroll {
+    width: 100%;
+    display: flex;
+    div {
+      color: #000000;
+      font-size: 100px;
+      background-color: #ffffff;
+      white-space: nowrap;
+      font-weight: lighter;
+      text-transform: uppercase;
+      animation: animate 40s linear infinite;
+      animation-delay: -10s;
+    }
+  }
+  .scroll.text2 {
+    width: 100%;
+    display: flex;
+    div {
+      color: #000000;
+      font-size: 100px;
+      background-color: #ffffff;
+      white-space: nowrap;
+      font-weight: lighter;
+      text-transform: uppercase;
+      animation: animate3 40s linear infinite;
+      animation-delay: -10s;
+    }
+  }
+}
+
+.animation_section .scroll div :nth-child(2) {
+  animation: animate2 40s linear infinite;
+  animation-delay: -20s;
+}
+
+.animation_section .scroll.text2 div :nth-child(2) {
+  animation: animate4 40s linear infinite;
+  animation-delay: -20s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

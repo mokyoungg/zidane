@@ -9,15 +9,21 @@
   width: 100%;
   //height: visible;
   overflow: scroll;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   background-color: #ffffff;
 }
 
 .section {
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
   position: relative;
   //overflow: visible;
+}
+
+.background {
+  background-image: url(../../images/backgroud.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title_container {
@@ -31,6 +37,7 @@
     font-family: "Raleway", sans-serif;
     font-size: 100px;
     font-weight: bold;
+    color: #ffffff;
     transform: translateY(100%);
   }
 }
@@ -71,93 +78,10 @@
   }
 }
 
-.animation_section {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  font-family: "Oswald", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .scroll {
-    width: 100%;
-    display: flex;
-    div {
-      color: #000000;
-      font-size: 100px;
-      background-color: #ffffff;
-      white-space: nowrap;
-      font-weight: lighter;
-      text-transform: uppercase;
-      animation: animate 40s linear infinite;
-      animation-delay: -10s;
-    }
-  }
-  .scroll.text2 {
-    width: 100%;
-    display: flex;
-    div {
-      color: #000000;
-      font-size: 100px;
-      background-color: #ffffff;
-      white-space: nowrap;
-      font-weight: lighter;
-      text-transform: uppercase;
-      animation: animate3 40s linear infinite;
-      animation-delay: -10s;
-    }
-  }
-}
-
-.animation_section .scroll div :nth-child(2) {
-  animation: animate2 40s linear infinite;
-  animation-delay: -20s;
-}
-
-.animation_section .scroll.text2 div :nth-child(2) {
-  animation: animate4 40s linear infinite;
-  animation-delay: -20s;
-}
-
-@keyframes animate {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes animate2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
-
-@keyframes animate3 {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes animate4 {
-  0% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 .career_container {
   width: 100%;
   position: relative;
+
   .line {
     background-color: #d1d1d1;
     width: 1px;
@@ -168,58 +92,53 @@
 }
 
 .career_right {
-  height: 451px;
-  margin-top: 0px;
-  position: relative;
   display: flex;
-  .img_right {
-    position: absolute;
-    left: 65%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .info_right {
-    text-align: left;
-    position: relative;
-    top: 50%;
-    left: 49%;
-    height: 60px;
-    width: 150px;
-    background-color: #ffffff;
-    font-family: "Raleway", sans-serif;
-    font-size: 20px;
-    span {
-      font-family: "Quattrocento", serif;
-      font-size: 15px;
-    }
-  }
+  justify-content: flex-end;
+  position: relative;
 }
 
 .career_left {
-  height: 451px;
-  margin-top: 0px;
-  position: relative;
   display: flex;
+  justify-content: flex-start;
+  position: relative;
   margin-top: -135px;
-  .img_left {
-    position: absolute;
-    right: 60%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .info_left {
-    text-align: right;
-    position: relative;
-    top: 50%;
-    left: 41%;
-    height: 60px;
-    width: 150px;
-    background-color: #ffffff;
-    font-family: "Raleway", sans-serif;
-    font-size: 20px;
-    span {
-      font-family: "Quattrocento", serif;
-      font-size: 15px;
-    }
-  }
+}
+
+/*
+.overlay_container {
+  width: 100%;
+  height: 100vh;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}*/
+
+.overlay {
+  //left: 0%;
+  width: 100%;
+  overflow: hidden;
+  //height: 100%;
+  left: -100%;
+  z-index: 10;
+}
+
+.first {
+  position: absolute;
+  top: 0%;
+  height: 33.3%;
+  background-color: $fblue;
+}
+
+.second {
+  position: absolute;
+  top: 33.3%;
+  height: 33.3%;
+  background-color: $fblue;
+}
+.third {
+  position: absolute;
+  top: 66.6%;
+  height: 33.3%;
+  background-color: $fblue;
 }

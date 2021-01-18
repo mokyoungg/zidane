@@ -36,9 +36,11 @@ const Euro = () => {
             //id: `section-${index+1}`,
             trigger: el,
             start: "top center+=100",
+            end: "top center+=150",
             toggleActions: "play none none reverse",
             //markers: true,
             scroller: document.querySelector(".wrapper"),
+            scrub: 0.5,
           },
         }
       );

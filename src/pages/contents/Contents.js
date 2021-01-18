@@ -1,50 +1,81 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Contents.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import ScrollText from "../../components/scrollText/ScrollText";
+import Career from "../../components/career/Career";
+import Footer from "../../components/footer/Footer";
+
 import img1 from "../../images/zidane.jpg";
 import img2 from "../../images/worldcup2.jpg";
-import img3 from "../../images/euro2.png";
+import img3 from "../../images/euro5.jpg";
 import img4 from "../../images/champions.png";
 import img5 from "../../images/worldcup06.jpg";
-import img6 from "../../images/zidane2.jpg";
+import img6 from "../../images/zidane3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Contents = () => {
+const Contents = ({ history }) => {
   const revealRefs = useRef([]);
   revealRefs.current = [];
 
+  const [isActive, setIsActive] = useState(false);
+
   useEffect(() => {
-    gsap.to(".title", {
-      delay: 0.5,
-      duration: 1,
-      y: "0%",
-      ease: "power3.inOut",
-      /*onComplete: () => {
-        console.log("끝");
-      },*/
-    });
+    const timeline = gsap.timeline({ defaults: { duration: 1 } });
+    timeline
+      .from(".background", {
+        opacity: 0,
+        delay: 0.5,
+      })
+      .to(".title", {
+        delay: 0.5,
+        duration: 1,
+        y: "0%",
+        ease: "power3.inOut",
+        /*onComplete: () => {
+        console.log("끝");*/
+      });
 
     revealRefs.current.forEach((el, index) => {
       gsap.fromTo(
         el,
-        { autoAlpha: 0 },
+        //{ autoAlpha: 0 },
+        { opacity: 0, y: "100" },
         {
           duration: 0.5,
-          autoAlpha: 1,
+          opacity: 1,
+          y: "0",
+          //autoAlpha: 1,
           ease: "none",
           scrollTrigger: {
             trigger: el,
             start: "top center+=100",
+            end: "top center+=150",
             toggleAttribute: "play none none reverse",
             scroller: document.querySelector(".wrapper"),
+            //markers: true,
+            scrub: 0.5,
           },
         }
       );
     });
-  }, []);
+
+    if (isActive === true) {
+      const tl = gsap.timeline();
+
+      tl.to(".overlay", {
+        delay: 0.5,
+        duration: 0.5,
+        left: "0%",
+        stagger: {
+          each: 0.1,
+          amount: 1,
+        },
+      });
+    }
+  }, [isActive]);
 
   const addToRefs = (el) => {
     //console.log(el);
@@ -53,15 +84,29 @@ const Contents = () => {
     }
   };
 
+  const moveToDetail = () => {
+    const link = () => {
+      history.push("/detail");
+    };
+    setIsActive(true);
+    setTimeout(link, 3000);
+  };
+
+  console.log(isActive);
   return (
     <div className="wrapper">
+      <div className="overlay first"></div>
+      <div className="overlay second"></div>
+      <div className="overlay third"></div>
       <div className="section">
-        <div className="title_container">
-          <p className="title">
-            A genius.
-            <br /> Zinedine Zidane marked an era in world football with his
-            elegance and technical skills.
-          </p>
+        <div className="background">
+          <div className="title_container">
+            <p className="title">
+              A genius.
+              <br /> Zinedine Zidane marked an era in world football with his
+              elegance and technical skills.
+            </p>
+          </div>
         </div>
       </div>
       <div className="section">
@@ -112,73 +157,32 @@ const Contents = () => {
           </p>
         </div>
       </div>
-      <div className="animation_section">
-        <div className="scroll text1">
-          <div>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-          </div>
-          <div>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-          </div>
-        </div>
-        <div className="scroll text2">
-          <div>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-          </div>
-          <div>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-            Zizou <span>Elegant </span>Maestro <span>Art </span>
-          </div>
-        </div>
-      </div>
+      <ScrollText />
       <div className="section">
         <div className="career_container">
           <div className="line"></div>
-          <div className="career_right" ref={addToRefs}>
-            <img className="img_right" src={img2} alt="img2" />
-            <div className="info_right">
-              <span>1998</span>
-              <br />
-              World Cup in France
-            </div>
+          <div
+            className="career_right"
+            ref={addToRefs}
+            onClick={() => moveToDetail()}
+          >
+            <Career img={img2} year={1998} title={"Wolrd Cup in France"} />
           </div>
           <div className="career_left" ref={addToRefs}>
-            <img className="img_left" src={img3} alt="img3" />
-            <div className="info_left">
-              <span>2000</span>
-              <br />
-              UEFA Euro
-            </div>
+            <Career img={img3} year={2000} title={"Euro"} />
           </div>
           <div className="career_right" ref={addToRefs}>
-            <img className="img_right" src={img4} alt="img4" />
-            <div className="info_right">
-              <span>2002</span>
-              <br />
-              Champions League
-            </div>
+            <Career img={img4} year={2002} title={"Champions League"} />
           </div>
           <div className="career_left" ref={addToRefs}>
-            <img className="img_left" src={img5} alt="img5" />
-            <div className="info_left">
-              <span>2006</span>
-              <br />
-              World Cup in Germany
-            </div>
+            <Career img={img5} year={2006} title={"World Cup in Germany"} />
           </div>
           <div className="career_right" ref={addToRefs}>
-            <img className="img_right" src={img6} alt="img6" />
-            <div className="info_right">
-              <span>2006</span>
-              <br />
-              Retirement
-            </div>
+            <Career img={img6} year={2006} title={"Retirement"} />
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

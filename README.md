@@ -19,6 +19,7 @@ gsap 을 활용한 애니메이션 연습
 - https://www.fifa.com/worldcup/news/zizou-s-gloomy-goodbye-2766007
 - https://www.madridistamn.com/2020/04/cescinho-reveals-real-madrids-recent.html
 - http://en.people.cn/200605/09/print20060509_264098.html
+- https://en.as.com/en/2018/01/25/football/1516884070_954930.html
 
 #### 내용(텍스트) 출처
 - https://www.realmadrid.com/en/news/2020/05/05/zidanes-volley-chosen-as-the-most-beautiful-goal-in-champions-league-history-by-france-football

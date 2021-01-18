@@ -6,9 +6,48 @@ import img1 from "../../images/worldcup.jpg";
 import img2 from "../../images/worldcup2.jpg";
 import img3 from "../../images/worldcup4.jpg";
 
-const FranceWorldCup = () => {
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
+const FranceWorldCup = () => {
+  const sectionRef = useRef(null);
+  const revealRefs = useRef([]);
+  revealRefs.current = [];
+
+  useEffect(() => {
+    gsap.from(sectionRef.current, {
+      duration: 1,
+      autoAlpha: 0,
+      ease: "none",
+    });
+
+    revealRefs.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0 },
+        {
+          duration: 0.5,
+          autoAlpha: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top center+=100",
+            end: "top center+=150",
+            toggleActions: "play none none reverse",
+            scroller: document.querySelector(".wrapper"),
+            scrub: 0.5,
+          },
+        }
+      );
+    });
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el);
+    }
+  };
+
+  /* useRef를 사용하지 않은 기존 코드
   useEffect(() => {
     gsap.from(".description_1998_1, .description_1998_2", {
       scrollTrigger: {
@@ -53,12 +92,12 @@ const FranceWorldCup = () => {
       opacity: 0,
       duration: 1,
     });
-  }, []);
+  }, []);*/
 
   return (
-    <div className="section_wrapper_1">
+    <div className="section_wrapper_1" ref={sectionRef}>
       <div className="section_first">
-        <div className="text_container">
+        <div className="text_container" ref={addToRefs}>
           <hr className="section_bar" />
           <p className="section_subtitle">July 12th, 1998</p>
           <hr className="section_bar" />
@@ -70,13 +109,13 @@ const FranceWorldCup = () => {
           <hr className="section_bar" />
         </div>
         <div className="img_container">
-          <img className="img1" src={img1} alt="img1" />
+          <img className="img1" src={img1} alt="img1" ref={addToRefs} />
         </div>
         <div className="trigger"></div>
       </div>
       <div className="section_second">
         <div className="description_1998_container">
-          <p className="description_1998_1">
+          <p className="description_1998_1" ref={addToRefs}>
             The 1998 FIFA World Cup was the first World Cup that Zidane
             participated in the tournament was held in his home country, France.
             The French team won all three games in the group stage, with Zidane
@@ -113,10 +152,10 @@ const FranceWorldCup = () => {
           </p>
         </div>
         <div className="img_container_1998">
-          <div className="img2_container">
+          <div className="img2_container" ref={addToRefs}>
             <img className="img2" src={img2} alt="img2" />
           </div>
-          <div className="img3_container">
+          <div className="img3_container" ref={addToRefs}>
             <img className="img3" src={img3} alt="img3" />
           </div>
         </div>

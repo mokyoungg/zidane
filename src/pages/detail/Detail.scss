@@ -1,0 +1,43 @@
+@import "../../styles/reset.scss";
+@import "../../styles/common";
+
+.detail_wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.detail_title_container {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $fblue;
+  .detail_title {
+    width: 100%;
+    font-family: "Oswald", sans-serif;
+    font-size: 250px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 3px 3px 0px black;
+    margin-bottom: -15%;
+    z-index: 20;
+  }
+  .bar.zero {
+    width: 100%;
+    height: 20px;
+    background-color: $fred;
+    z-index: 10;
+    margin-top: 3%;
+  }
+  .bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ffffff;
+    z-index: 10;
+    margin-top: 3%;
+  }
+}

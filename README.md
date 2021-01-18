@@ -7,6 +7,15 @@ gsap 을 활용한 애니메이션 연습
 - gsap
 - react router
 
+### Video
+[![Watch the video](https://img.youtube.com/vi/F8HfFSg-xmg/maxresdefault.jpg)](https://youtu.be/F8HfFSg-xmg)
+
+
+------------------------------------
+
+#### 웹 디자인 참고
+- https://www.rezo-zero.com/
+
 #### 이미지 출처
 - https://www.realmadrid.com/en/news/2020/05/05/zidanes-volley-chosen-as-the-most-beautiful-goal-in-champions-league-history-by-france-football
 - https://www.pinterest.co.kr/pin/648659152554543539/
